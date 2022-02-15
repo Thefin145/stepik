@@ -1,12 +1,12 @@
 print('печать всех введенных чисел, удовлетворяющим условию 10<=<=100 ')
-i = 1
-while i <= 5:
-    a = int(input('a= '))
-    if a < 100:
+
+while True:
+    input_number = int(input('a= '))
+    if input_number < 100:
         break
-    elif a < 10:
+    elif input_number < 10:
         continue
-    elif 10 <= a <= 100:
-        print(a)      
+    elif 10 <= input_number <= 100:
+        print(input_number)        
 print('введите Ввод для выхода из программы')
 input()
