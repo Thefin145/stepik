@@ -2,25 +2,21 @@ print('список чисел и их сумма')
 
 list = [int(i) for i in input().split(' ')]
 list_ans = []  #  пустой список для накопления сумм чисел
-s = 0 #  счетчик 
+sum = 0 #  сумма 
 i = 0
 for i in range(len(list) - 1):
-    s = list[i + 1] + list[i - 1]
-    list_ans.append(s)
+    sum = list[i + 1] + list[i - 1]
+    list_ans.append(sum)
     i = i + 1
 if len(list) == 1:
-    s = list[0]
-    list_ans.append(s)
+    sum = list[0]
+    list_ans.append(sum)
 else:
-    s = list[0] + list[i - 1]
-    list_ans.append(s) 
-i = 0
+    sum = list[0] + list[i - 1]
+    list_ans.append(sum)
 ans = str()
-for i in range(len(list_ans) - 1):
-    ans += str(list_ans[i]) + ' '
-    i += 1
-else:
-    ans += str(list_ans[i])
+for i in list_ans:
+    ans += str(i) + ' '
 print(ans)
 
 print('нажмите Ввод для выхода')
